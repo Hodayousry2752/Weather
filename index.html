@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/logo@2x.png">
+    <link rel="stylesheet" href="css/all.css" class="rel">
+    <link rel="stylesheet" href="css/bootstrap.min.css" class="rel">
+    <link rel="stylesheet" href="css/style.css" class="rel">
+
+    <title>Weather</title>
+</head>
+<body>
+    <div>
+        <!-- section one of navbar -->
+        <section>
+                <nav class="navbar navbar-expand-lg py-5">
+                    <div class="container-fluid px-5 mx-5">
+                        <a href="index.html"><div class="d-flex">
+                            <img class="logo-img" src="images/logo@2x.png" alt="weather"/>
+                            <div class="ps-3">
+                                <p class="navbar-brand fs-6 fw-bolder mb-0" href="index.html">Weather</p>
+                                <p class="prag-brand ">tagline goes here</p>
+                            </div>
+                        </div></a>
+                        <button class="navbar-toggler nav-list border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <!-- <span class="navbar-toggler-icon nav-icn"></span> -->
+                            <i class="fa fa-bars  p-3 nav-icn fs-6 rounded-circle"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                                <li class="nav-item home-item">
+                                    <a class="nav-link active home-anc" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active hover" aria-current="page" href="#">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active hover" aria-current="page" href="#">Live cameras</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active hover" aria-current="page" href="#">Photos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active hover" aria-current="page" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        </section>
+        <!-- section two weather of 3 days -->
+        <section class="bg-both w-100 position-relative">
+            <div class="bg-img  w-100 d-flex justify-content-center">
+                <div class="w80 ">
+                    <form class="w-100 position-relative">
+                        <input type="text" id='search' value="" name="location" placeholder="Find your location" class=" w-100 input-text"/>
+                        <input type="button" name="submit" value="Find" class="position-absolute input-btn"/>
+
+                    </form>
+                </div>
+            </div>
+            <div class=" bg-halfC w-100">
+            </div>
+            <div class="dott  w-100 ">
+
+                <div id="allTemps" class="all-temps  position-absolute">
+                    <div class="container w-100">
+                        <div class="row g-0 all-slides">
+                            <div class="one-slide slide col-lg-4 ">
+                                <div class="d-flex justify-content-between px-2 pt-2 pb-1  one-above">
+                                    <p id="thisDay"></p>
+                                    <div class="d-flex">
+                                        <p id='dateOfThisDay'></p>
+                                        <p id='dateOfThisMonth'></p>
+                                    </div>
+                                </div>
+                                <div class="text-start ps-3">
+                                    <p class="py-2" id='keySearch'></p>
+                                    <div class="d-flex temp-img flex-wrap">
+                                        <h2 class='temp' id='temOfThisDay'></h2>
+                                        <img class="one-temp" id='imgOfThisDay' />
+                                    </div>
+                                    <p class="sun-shape" id="weatherApp"></p>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <img class="img-wind" src="images/icon-umberella@2x.png" alt="umberella"/>
+                                            <p id='umberella'>20%</p>
+                                        </div>
+                                        <div class="d-flex">
+                                            <img class="img-wind" src="images/icon-wind@2x.png" alt="wind"/>
+                                            <p id='wind'>18km/s</p>
+                                        </div>
+                                        <div class="d-flex">
+                                            <img class="img-wind" src="images/icon-compass@2x.png" alt="compass"/>
+                                            <p id='compass'>East</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="two-slide slide  col-lg-4 text-center ">
+                                <div class=" pt-2 pb-1 two-above">
+                                    <p id="nextDay"></p>
+                                </div>
+                                <div>
+                                    <img class="imgOfNextDay" id='imgOfNextDay'/>
+                                    <h2 class='temp fw-bold' id='tempOfNextDayMax'></h2>
+                                    <p id='tempOfNextDayMin'></p>
+                                    <p class="sun-shape" id="weatherAppNext"></p>
+                                </div>
+                            </div>
+                            <div class="three-slide slide  col-lg-4 text-center">
+                                <div class=" pt-2 pb-1 three-above">
+                                    <p id="thredDay"></p>
+                                </div>
+                                <div>
+                                    <img class="imgOfNextDay" id='imgOfThredDay'/>
+                                    <h2 class='temp fw-bold' id='tempOfThredDayMax'></h2>
+                                    <p id='tempOfThredDayMin'></p>
+                                    <p class="sun-shape" id="weatherAppThred"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+            </div> 
+        </section>
+        <!-- section three of footer -->
+        <footer class="footer-section  w-100">
+            <div class='container foot-cont  mx-auto'>
+                <div class="row">
+                   <div class="col-md-8">
+                        <form action="#" class="w-100 position-relative">
+                            <input type="text" id='search' name="location" placeholder="Enter your email to subscribe..." class=" w-100 input-text"/>
+                            <input type="button" id="subscribe" name="submit" value="subscribe" class="position-absolute input-btn"/>
+                        </form>
+                   </div>
+                   <div class="icons-div col-md-3">
+                      <div class="social-links position-relative d-flex justify-content-center "> 
+                        <a href="#"><i class="fa-brands fa-facebook-f  icn "></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter icn"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus icn"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest icn"></i></a>
+                       </div>
+                   </div>
+                   <p class="prag-foot py-4">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+                   
+                </div>
+                
+            </div>
+        </footer>
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
